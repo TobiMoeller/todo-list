@@ -2,10 +2,12 @@ package de.dhbw.todolist;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class TodoList {
 
     public static void main(String[] args) {
+
 
       // Tags festlegen
       Tag freizeit = new Tag("Freizeit", Color.GREEN);
@@ -45,6 +47,11 @@ public class TodoList {
       l1.addAufgabe(a3);
       l1.addAufgabe(a4);
 
+      System.out.println(l1.filterTags());
+
+      //Aufgabe suchergebnis = l1.searchAufgabe("Lotto");
+      //System.out.println(suchergebnis);
+
       System.out.println(l1);
 
       l1.deleteAufgabe(a2);
@@ -56,5 +63,7 @@ public class TodoList {
 
       // Erwartung: Aufgabe 4 ist erledigt
       System.out.println(l1);
+
+
     }
 }
